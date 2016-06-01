@@ -384,7 +384,7 @@ h1,h2,h3{
                                     <i class="fa fa-facebook"></i> Facebook
                                 </a>
                                 
-                                <a class="btn btn-link-2" href="#">
+                                <a class="btn btn-link-2" href="http://www.scrapit2016.herokuapp.com/login/api.php">
                                     <i class="fa fa-google-plus"></i> Google Plus
                                 </a>
                             </div>
