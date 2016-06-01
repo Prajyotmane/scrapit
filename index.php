@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="google-site-verification" content="Z88kj1mom_f_27vPbZ645h-H4V0qnZKS-6qeejWkh9c" />
 
     <title>Scrap it!</title>
 
