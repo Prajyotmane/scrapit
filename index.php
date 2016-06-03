@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="google-site-verification" content="Z88kj1mom_f_27vPbZ645h-H4V0qnZKS-6qeejWkh9c" />
+    <meta name="google-signin-client_id" content="395951673212-li57nk6kpt89edjjq51q2t9786lqlffn.apps.googleusercontent.com">
 
     <title>Scrap it!</title>
 
@@ -119,6 +120,7 @@ h1,h2,h3{
 <body id="page-top">
     
 
+<script src="https://apis.google.com/js/platform.js" async defer></script>
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -383,10 +385,9 @@ h1,h2,h3{
                                 <a class="btn btn-link-2" href="#">
                                     <i class="fa fa-facebook"></i> Facebook
                                 </a>
+    
+                                    <div class="fa fa-google-plus g-signin2" data-onsuccess="onSignIn"></div>
                                 
-                                <a class="btn btn-link-2" href="https://scrapit2016.herokuapp.com/login/login.php">
-                                    <i class="fa fa-google-plus"></i> Google Plus
-                                </a>
                             </div>
                         
     </div>
@@ -434,6 +435,13 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+    function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+}
 }
 
 </script>
