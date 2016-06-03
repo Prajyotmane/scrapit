@@ -382,11 +382,11 @@ h1,h2,h3{
                             </div>
                             <h3>Or Login with</h2>
                             <div class="social-login-buttons">
-                                <a class="btn btn-link-2" href="#">
+                              <!--  <a class="btn btn-link-2" href="#">
                                     <i class="fa fa-facebook"></i> Facebook
-                                </a>
-    
-                                    <div class="fa fa-google-plus g-signin2" data-onsuccess="onSignIn"></div>
+                                </a> -->
+                                    <i class="fa g-signin2" data-onsuccess="onSignIn"></i>
+                                  <!--  <div class="fa fa-google-plus g-signin2" data-onsuccess="onSignIn"></div>-->
                                 
                             </div>
                         
@@ -435,13 +435,16 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-    function onSignIn(googleUser) {
+   
+}
+ function onSignIn(googleUser) {
+
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail());
-}
+   alert("Hello "+ profile.getName()+"\n Email : "+profile.getEmail());
 }
 
 </script>
