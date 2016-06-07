@@ -16,11 +16,11 @@ function regfrompage()
 	}
 function Register($uid,$email,$cont,$dob,$city,$gender,$pass){
      $host="ec2-23-21-102-155.compute-1.amazonaws.com";
-	$password="FFLiMoCgcllvlA1pHMxiNBwSTT";
-	$username="sitexwsingsyay";
-	$database="d4o8tbiijf5hsu";
-	$con=new mysqli($host,$username,$password,$database);
-	 
+	 $password="FFLiMoCgcllvlA1pHMxiNBwSTT";
+	 $username="sitexwsingsyay";
+	 $database="d4o8tbiijf5hsu";
+	 $con=new mysqli($host,$username,$password,$database);
+	 echo $con->connect_error;
 	if($con->connect_error)
 	{
 		trigger_error('Database Connection Failed: '.$con->connect_error,E_USER_ERROR);
