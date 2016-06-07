@@ -12,7 +12,7 @@ function regfrompage()
 		$city="hbhbs";
 		$gender=" ";
 		$pass=$_POST['form-password'];
-		$this->Register($uid,$email,$cont,$dob,$city,$gender,$pass);
+		Register($uid,$email,$cont,$dob,$city,$gender,$pass);
 	}
 function Register($uid,$email,$cont,$dob,$city,$gender,$pass){
      $host="ec2-23-21-102-155.compute-1.amazonaws.com";
