@@ -19,8 +19,8 @@ function Register($uid,$email,$cont,$dob,$city,$gender,$pass){
 	 $password="FFLiMoCgcllvlA1pHMxiNBwSTT";
 	 $username="sitexwsingsyay";
 	 $database="d4o8tbiijf5hsu";
-	 $con=new mysqli($host,$username,$password,$database);
-	 echo $con->connect_error;
+	// $con=new mysqli($host,$username,$password,$database);
+	 $con = pg_connect("host=".$host." port=5432 dbname=".$database." user=".$username." password=".$password);
 	if($con->connect_error)
 	{
 		trigger_error('Database Connection Failed: '.$con->connect_error,E_USER_ERROR);
