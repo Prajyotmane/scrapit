@@ -368,7 +368,7 @@ h1,h2,h3{
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                <form role="form" action="" method="post" class="login-form">
+                                <form role="form" action="https://www.scrapit2016.herokuapp.com/register.php?method=regfrompage" method="post" class="login-form">
                                     <div class="form-group">
                                         <label class="sr-only" for="form-username">Username</label>
                                         <input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
