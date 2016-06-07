@@ -1,5 +1,7 @@
 <?php
+echo $_GET['method'];
 $_GET['method']();
+
 
 function regfrompage()
 	{
@@ -22,6 +24,7 @@ function Register($uid,$email,$cont,$dob,$city,$gender,$pass){
 	if($con->connect_error)
 	{
 		trigger_error('Database Connection Failed: '.$con->connect_error,E_USER_ERROR);
+		echo "Error";
 	}
 	
 	
@@ -30,18 +33,11 @@ function Register($uid,$email,$cont,$dob,$city,$gender,$pass){
 		$res=$con->query("insert into user values('$email','$pass');");
 		if($res===true)
 		{
-			$res=$con->query("Select * from user where Email='$email'AND Password='$pass';");
-			$row=$res->fetch_assoc();
-			session_start();
-			$_SESSION['id']=$row['Userid'];
-			$_SESSION['email']=$row['Email'];
-
-			
-			header('Location:profilpic.html');
+			echo "Registered";
 		}
 		else{
 			echo "<script type='text/javascript'>alert('Error acured While registration, Your Email Id is already registered');
-			window.location.href = 'http://localhost/Project MD/New folder/signup.php';</script>";
+			</script>";
 		}
 	}
 	?>
