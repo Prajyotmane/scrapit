@@ -2,12 +2,9 @@
 
 	    $uid="123";
 		$email="prajyotmane464@gmail.com";
-		$cont=986532;
-		$dob="1522";
-		$city="hbhbs";
-		$gender=" ";
+		
 		$pass="Password";
-	$name="Hi"
+	$name="Hi";
      $host="host=ec2-23-21-102-155.compute-1.amazonaws.com";
 	 $credentials="user=sitexwsingsyay password=FFLiMoCgcllvlA1pHMxiNBwSTT";
 	// $password="FFLiMoCgcllvlA1pHMxiNBwSTT";
@@ -21,7 +18,7 @@
 		echo "Error";
 	}
 	else
-		echo "Opened database successfully\n"
+		echo "Opened database successfully\n";
 	
 		 $sql =<<<EOF
       CREATE TABLE USER
