@@ -9,11 +9,11 @@
 		$pass="Password";
 	$name="Hi"
      $host="host=ec2-23-21-102-155.compute-1.amazonaws.com";
-	 $credentials="user=sitexwsingsyay password=FFLiMoCgcllvlA1pHMxiNBwSTT"
+	 $credentials="user=sitexwsingsyay password=FFLiMoCgcllvlA1pHMxiNBwSTT";
 	// $password="FFLiMoCgcllvlA1pHMxiNBwSTT";
 	// $username="sitexwsingsyay";
 	 $database="dbname=d4o8tbiijf5hsu";
-	 $port="port=5432"
+	 $port="port=5432";
 	// $con=new mysqli($host,$username,$password,$database);
 	 $con = pg_connect("$host $port $database $credentials");
 	if(!$con)
