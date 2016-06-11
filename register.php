@@ -21,10 +21,10 @@
 		echo "Opened database successfully\n";
 	
 		 $sql =<<<EOF
-      CREATE TABLE USER (ID INT PRIMARY KEY     NOT NULL,
-      UNAME           TEXT    NOT NULL,
-      EMAIL            CHAR(100)     NOT NULL,
-      PASSWORD        CHAR(50));
+      CREATE TABLE user(ID INT PRIMARY KEY NOT NULL,
+      UNAME  CHAR(50) NOT NULL,
+      EMAIL CHAR(100) NOT NULL,
+      PASSWORD CHAR(50));
 EOF;
 		$ret = pg_query($con, $sql);
        if(!$ret){
@@ -33,7 +33,7 @@ EOF;
       echo "Table created successfully\n";
    }
    $sql=<<<EOF
-   INSERT INTO USER (ID,UNAME,EMAIL,PASSWORD)
+   INSERT INTO user(ID,UNAME,EMAIL,PASSWORD)
       VALUES (1,$name,$email,$pass );
 EOF;
  $ret = pg_query($con, $sql);
