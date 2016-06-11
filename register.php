@@ -5,12 +5,12 @@ regfrompage();
 function regfrompage()
 	{
 	    $uid="123";
-		$email=$_POST['form-username'];
+		$email="prajyotmane464@gmail.com";
 		$cont=986532;
 		$dob="1522";
 		$city="hbhbs";
 		$gender=" ";
-		$pass=$_POST['form-password'];
+		$pass="Password";
 		Register($uid,$email,$cont,$dob,$city,$gender,$pass);
 	}
 function Register($uid,$email,$cont,$dob,$city,$gender,$pass){
