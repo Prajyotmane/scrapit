@@ -29,7 +29,7 @@
 EOF;
 		$ret = pg_query($con, $sql);
        if(!$ret){
-      echo pg_last_error($db);
+      echo pg_last_error($con);
      } else {
       echo "Table created successfully\n";
    }
@@ -39,7 +39,7 @@ EOF;
 EOF;
  $ret = pg_query($con, $sql);
    if(!$ret){
-      echo pg_last_error($db);
+      echo pg_last_error($con);
    } else {
       echo "Records created successfully\n";
    }
