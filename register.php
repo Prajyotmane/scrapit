@@ -21,8 +21,7 @@
 		echo "Opened database successfully\n";
 	
 		 $sql =<<<EOF
-      CREATE TABLE USER
-      (ID INT PRIMARY KEY     NOT NULL,
+      CREATE TABLE USER (ID INT PRIMARY KEY     NOT NULL,
       UNAME           TEXT    NOT NULL,
       EMAIL            CHAR(100)     NOT NULL,
       PASSWORD        CHAR(50));
