@@ -1,7 +1,6 @@
 <?php
-echo $_GET['method'];
-$_GET['method']();
 
+regfrompage();
 
 function regfrompage()
 	{
