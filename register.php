@@ -1,9 +1,5 @@
 <?php
 
-regfrompage();
-
-function regfrompage()
-	{
 	    $uid="123";
 		$email="prajyotmane464@gmail.com";
 		$cont=986532;
@@ -11,9 +7,6 @@ function regfrompage()
 		$city="hbhbs";
 		$gender=" ";
 		$pass="Password";
-		Register($uid,$email,$cont,$dob,$city,$gender,$pass);
-	}
-function Register($uid,$email,$cont,$dob,$city,$gender,$pass){
 	$name="Hi"
      $host="host=ec2-23-21-102-155.compute-1.amazonaws.com";
 	 $credentials="user=sitexwsingsyay password=FFLiMoCgcllvlA1pHMxiNBwSTT"
@@ -55,5 +48,5 @@ EOF;
    }
    pg_close($con);
 		
-	}
+	
 	?>
