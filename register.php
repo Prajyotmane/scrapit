@@ -15,29 +15,46 @@ function regfrompage()
 		Register($uid,$email,$cont,$dob,$city,$gender,$pass);
 	}
 function Register($uid,$email,$cont,$dob,$city,$gender,$pass){
-     $host="ec2-23-21-102-155.compute-1.amazonaws.com";
-	 $password="FFLiMoCgcllvlA1pHMxiNBwSTT";
-	 $username="sitexwsingsyay";
-	 $database="d4o8tbiijf5hsu";
+	$name="Hi"
+     $host="host=ec2-23-21-102-155.compute-1.amazonaws.com";
+	 $credentials="user=sitexwsingsyay password=FFLiMoCgcllvlA1pHMxiNBwSTT"
+	// $password="FFLiMoCgcllvlA1pHMxiNBwSTT";
+	// $username="sitexwsingsyay";
+	 $database="dbname=d4o8tbiijf5hsu";
+	 $port="port=5432"
 	// $con=new mysqli($host,$username,$password,$database);
-	 $con = pg_connect("host=".$host." port=5432 dbname=".$database." user=".$username." password=".$password);
-	if($con->connect_error)
+	 $con = pg_connect("$host $port $database $credentials");
+	if(!$con)
 	{
-		trigger_error('Database Connection Failed: '.$con->connect_error,E_USER_ERROR);
 		echo "Error";
 	}
+	else
+		echo "Opened database successfully\n"
 	
-	
+		 $sql =<<<EOF
+      CREATE TABLE USER
+      (ID INT PRIMARY KEY     NOT NULL,
+      UNAME           TEXT    NOT NULL,
+      EMAIL            CHAR(100)     NOT NULL,
+      PASSWORD        CHAR(50));
+EOF;
+		$ret = pg_query($con, $sql);
+       if(!$ret){
+      echo pg_last_error($db);
+     } else {
+      echo "Table created successfully\n";
+   }
+   $sql=<<<EOF
+   INSERT INTO USER (ID,UNAME,EMAIL,PASSWORD)
+      VALUES (1,$name,$email,$pass );
+EOF;
+ $ret = pg_query($con, $sql);
+   if(!$ret){
+      echo pg_last_error($db);
+   } else {
+      echo "Records created successfully\n";
+   }
+   pg_close($con);
 		
-		$res=$con->query("create table user(email varchar(50),password varchar(20));");
-		$res=$con->query("insert into user values('$email','$pass');");
-		if($res===true)
-		{
-			echo "Registered";
-		}
-		else{
-			echo "<script type='text/javascript'>alert('Error acured While registration, Your Email Id is already registered');
-			</script>";
-		}
 	}
 	?>
