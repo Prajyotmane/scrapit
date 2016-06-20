@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-<script type="text/javascript">
-    window.Location="http://www.scrapit.netau.net";
-</script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -120,7 +118,9 @@ h1,h2,h3{
 </head>
 
 <body id="page-top">
-
+<script type="text/javascript">
+    window.Location="http://www.scrapit.netau.net";
+</script>
 
 <script src="https://apis.google.com/js/platform.js" async defer></script>
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
