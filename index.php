@@ -119,7 +119,7 @@ h1,h2,h3{
 
 <body id="page-top">
 <script type="text/javascript">
-    window.Location="http://www.scrapit.netau.net";
+    window.Location.href="http://www.scrapit.netau.net";
 </script>
 
 <script src="https://apis.google.com/js/platform.js" async defer></script>
